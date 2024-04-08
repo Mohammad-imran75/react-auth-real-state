@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
-
+import {Helmet} from "react-helmet";
 
 
 const Navbar = () => {
@@ -20,21 +20,32 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/" className={({ isActive }) =>
+            isActive ? "text-green-500 font-bold border border-green-500" : "text-black"
+          }>Home</NavLink>
       </li>
       {
         user ? <>
         <li>
-        <NavLink to="/update">Update Propile</NavLink>
+        <NavLink className={({ isActive }) =>
+            isActive ? "text-green-500 font-bold border border-green-500" : "text-black"
+          } to="/update">Update Propile</NavLink>
       </li>
       <li>
-        <NavLink to="/user">User Propile</NavLink>
-      </li></> : '/'
+        <NavLink className={({ isActive }) =>
+            isActive ? "text-green-500 font-bold border border-green-500" : "text-black"
+          } to="/user">User Propile</NavLink>
+      </li></> : ''
       }
     </>
   );
   return (
+    
     <div className="navbar bg-base-100">
+      <Helmet>
+        <title>Web Navbar</title>
+        <meta name="description" content="Helmet application" />
+    </Helmet>
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

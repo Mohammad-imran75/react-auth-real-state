@@ -4,7 +4,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-
+import {Helmet} from 'react-helmet';
 const RegisterPage = () => {
     const {userRegister} = useContext(AuthContext);
     const [showPassword,setShowPassword] = useState(false)
@@ -41,7 +41,10 @@ const RegisterPage = () => {
 
   return (
     <div className="mt-10">
-      
+      <Helmet>
+        <title>Web Register page</title>
+        <meta name="description" content="Helmet application" />
+    </Helmet>
       <h2 className="text-3xl text-center font-serif">Please register now</h2>
       <div className="md:w-3/4 lg:w-1/3 mx-auto shadow bg-base-100">
         <form onSubmit={handleRegister} className="card-body">
