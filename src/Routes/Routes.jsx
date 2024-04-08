@@ -9,20 +9,18 @@ import Login from "../Pages/Login";
 import RegisterPage from "../Pages/RegisterPage";
 import PrivateRoutes from "./PrivateRoutes";
 import Property from "../Pages/Property";
+import ErrorPage from "../Pages/ErrorPage";
 
   const router = createBrowserRouter([
     {
       path: "/",
       element:<Root></Root> ,
+      errorElement:<ErrorPage></ErrorPage>,
       children:[
         {
           path:'/',
           element:<Home></Home>,
           loader:()=>fetch('/fakeData.json')
-          // loader: async () => {
-          //   const response = await fetch('/fakeData.json');
-          //   const data = await response.json();
-          //   return data;
         },{
           path:'/resturant/:id',
           element:<PrivateRoutes><Property></Property></PrivateRoutes>,
