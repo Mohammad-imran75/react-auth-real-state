@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
-import { signOut } from "firebase/auth";
-import auth from "../FirebaseAuth/firebase.config";
+
+
 
 const Navbar = () => {
   const [currentUser , setCurrentUser] = useState();
@@ -22,12 +22,15 @@ const Navbar = () => {
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
-      <li>
+      {
+        user ? <>
+        <li>
         <NavLink to="/update">Update Propile</NavLink>
       </li>
       <li>
         <NavLink to="/user">User Propile</NavLink>
-      </li>
+      </li></> : '/'
+      }
     </>
   );
   return (
