@@ -1,6 +1,8 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const RegisterPage = () => {
     const {userRegister} = useContext(AuthContext);
@@ -12,6 +14,10 @@ const RegisterPage = () => {
     const name = form.get("name");
     const password = form.get("password");
     console.log(email, photo, name, password);
+    if(password.length > 6){
+      toast.error('Password must be 6 characters or longer');
+      return;
+    }
     userRegister(email, password)
       .then((result) => {
         console.log(result.user);
@@ -92,6 +98,7 @@ const RegisterPage = () => {
           </h3>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

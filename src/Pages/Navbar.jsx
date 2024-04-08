@@ -81,7 +81,7 @@ const Navbar = () => {
             <button className="btn btn-primary">
               <NavLink to="/login">Login</NavLink>
             </button>
-            <button className="btn btn-secondary">
+            <button className="btn btn-secondary ml-4">
               <NavLink to="/register">Register</NavLink>
             </button>
           </>
