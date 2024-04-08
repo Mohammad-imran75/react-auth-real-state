@@ -8,6 +8,7 @@ import UserPropile from "../Pages/UserPropile";
 import Login from "../Pages/Login";
 import RegisterPage from "../Pages/RegisterPage";
 import PrivateRoutes from "./PrivateRoutes";
+import Property from "../Pages/Property";
 
   const router = createBrowserRouter([
     {
@@ -15,15 +16,20 @@ import PrivateRoutes from "./PrivateRoutes";
       element:<Root></Root> ,
       children:[
         {
-          path:'/home',
+          path:'/',
           element:<Home></Home>,
-          loader: async () => {
-            const response = await fetch('/fakeData.json');
-            const data = await response.json();
-            return data;
+          loader:()=>fetch('/fakeData.json')
+          // loader: async () => {
+          //   const response = await fetch('/fakeData.json');
+          //   const data = await response.json();
+          //   return data;
+        },{
+          path:'/resturant/:id',
+          element:<PrivateRoutes><Property></Property></PrivateRoutes>,
+          loader:()=>fetch('/fakeData.json')
         }
         
-        },{
+        ,{
           path:'/update',
           element:<UpdatePropile></UpdatePropile>
         },{

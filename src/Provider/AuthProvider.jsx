@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import {
   createUserWithEmailAndPassword,
@@ -19,25 +19,31 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
-  const signInOut = () => {
+  const logOut = () => {
+    setLoading(true)
     return signOut(auth);
   };
-  const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-    if (currentUser) {
-      setUser(currentUser);
-      setLoading(false);
-    }
-    return () => {
-      unSubscribe();
-    };
-  });
+  useEffect(()=>{
+    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      if (currentUser) {
+        setUser(currentUser);
+        setLoading(false);
+      }else{
+        setUser(null)
+        setLoading(false)
+      }
+      return () => {
+       return unSubscribe();
+      };
+    });
+  },[])
 
   const authInfo = {
     user,
     userRegister,
     loginUser,
     loading,
-    signInOut,
+    logOut
   };
 
   return (
