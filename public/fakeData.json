@@ -1,0 +1,111 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Gourmet Haven",
+      "segment_name": "Restaurant",
+      "description": "Experience the epitome of culinary delight at Gourmet Haven, where flavors from around the world converge.",
+      "price": "$$$",
+      "status": "sale",
+      "area": "3000 sq ft",
+      "location": "Downtown District",
+      "facilities": ["fine dining area", "outdoor seating", "fully equipped kitchen"],
+      "image": "https://i.ibb.co/1bg6Gq8/restaurant-table-with-two-couches-near-window.jpg"
+    },
+    {
+      "id": 2,
+      "estate_title": "Sea Breeze Eateries",
+      "segment_name": "Restaurant",
+      "description": "Indulge in fresh seafood and ocean-inspired delicacies at Sea Breeze Eateries, where every bite is a voyage.",
+      "price": "$$",
+      "status": "rent",
+      "area": "2500 sq ft",
+      "location": "Coastal Promenade",
+      "facilities": ["sea view terrace", "private dining rooms", "bar area"],
+      "image": "https://i.ibb.co/7QMZ8dC/spencer-davis-o-Xkav-Ua-GEw-unsplash.jpg"
+    },
+    {
+      "id": 3,
+      "estate_title": "Urban Bistro",
+      "segment_name": "Restaurant",
+      "description": "Discover the vibrant ambiance and eclectic menu at Urban Bistro, where urban culture meets culinary innovation.",
+      "price": "$",
+      "status": "sale",
+      "area": "1800 sq ft",
+      "location": "City Center",
+      "facilities": ["casual dining area", "coffee bar", "outdoor patio"],
+      "image": "https://i.ibb.co/Gs5z2D0/tomas-martinez-1vl-Uai-EQR6k-unsplash.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Café Serenity",
+      "segment_name": "Restaurant",
+      "description": "Relax and unwind in the tranquil atmosphere of Café Serenity, offering artisanal coffee and wholesome bites.",
+      "price": "$$",
+      "status": "rent",
+      "area": "2000 sq ft",
+      "location": "Suburban Retreat",
+      "facilities": ["cozy seating area", "garden view", "pastry kitchen"],
+      "image": "https://i.ibb.co/YpJ2rFW/marco-lastella-V9-EKa-WLK4-Pw-unsplash.jpg"
+    },
+    {
+      "id": 5,
+      "estate_title": "Spice Garden",
+      "segment_name": "Restaurant",
+      "description": "Embark on a culinary journey through aromatic spices and authentic flavors at Spice Garden, a paradise for food enthusiasts.",
+      "price": "$$$",
+      "status": "sale",
+      "area": "2800 sq ft",
+      "location": "Cultural Quarter",
+      "facilities": ["spice market area", "private dining pods", "open-air courtyard"],
+      "image": "https://i.ibb.co/m6Sq0Bx/side-view-breakfast-table-with-red-tablecloth-fried-eggs-cheese-cheese-cucumbers-tomatoes-lettuce-co.jpg"
+    },
+    {
+      "id": 6,
+      "estate_title": "Rooftop Retreat",
+      "segment_name": "Restaurant",
+      "description": "Elevate your dining experience at Rooftop Retreat, where breathtaking views and delectable cuisine come together.",
+      "price": "$$$",
+      "status": "sale",
+      "area": "3500 sq ft",
+      "location": "Skyline Heights",
+      "facilities": ["rooftop terrace", "VIP lounge", "modern bar"],
+      "image": "https://i.ibb.co/47Xsj4N/restaurant-tables.jpg"
+    },
+    {
+      "id": 7,
+      "estate_title": "Sushi Symphony",
+      "segment_name": "Restaurant",
+      "description": "Delight in the harmony of flavors and precision at Sushi Symphony, where every roll is a masterpiece.",
+      "price": "$$",
+      "status": "rent",
+      "area": "2200 sq ft",
+      "location": "Arts District",
+      "facilities": ["sushi bar", "private tatami rooms", "Zen garden"],
+      "image": "https://i.ibb.co/sPpbybp/restaurant-hall-with-bright-color-sitting-furniturs-panoramic-windows.jpg"
+    },
+    {
+      "id": 8,
+      "estate_title": "Piazza Pizzeria",
+      "segment_name": "Restaurant",
+      "description": "Savor the authentic taste of Italy at Piazza Pizzeria, where wood-fired pizzas and rustic charm await.",
+      "price": "$",
+      "status": "rent",
+      "area": "1500 sq ft",
+      "location": "Italian Quarter",
+      "facilities": ["pizza oven", "alfresco dining", "gelato counter"],
+      "image": "https://i.ibb.co/3TsvCKb/modern-restaurant-with-various-places.jpg"
+    },
+    {
+      "id": 9,
+      "estate_title": "Burger Barn",
+      "segment_name": "Restaurant",
+      "description": "Indulge in classic comfort food and juicy burgers at Burger Barn, a casual dining destination for all.",
+      "price": "$",
+      "status": "sale",
+      "area": "2000 sq ft",
+      "location": "Suburban Plaza",
+      "facilities": ["burger bar", "game arcade", "outdoor picnic area"],
+      "image": "https://i.ibb.co/KsYmnj1/sitting-table-with-chairs-yellow-sofa-restaurant-with-panoramic-view.jpg"
+    }
+  ]
+  

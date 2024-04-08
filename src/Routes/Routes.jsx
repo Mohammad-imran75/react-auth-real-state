@@ -5,6 +5,9 @@ import Root from "../Root/Root";
 import Home from "../Pages/Home";
 import UpdatePropile from "../Pages/UpdatePropile";
 import UserPropile from "../Pages/UserPropile";
+import Login from "../Pages/Login";
+import RegisterPage from "../Pages/RegisterPage";
+import PrivateRoutes from "./PrivateRoutes";
 
   const router = createBrowserRouter([
     {
@@ -13,13 +16,25 @@ import UserPropile from "../Pages/UserPropile";
       children:[
         {
           path:'/home',
-          element:<Home></Home>
+          element:<Home></Home>,
+          loader: async () => {
+            const response = await fetch('/fakeData.json');
+            const data = await response.json();
+            return data;
+        }
+        
         },{
           path:'/update',
           element:<UpdatePropile></UpdatePropile>
         },{
           path:'/user',
-          element:<UserPropile></UserPropile>
+          element:<PrivateRoutes><UserPropile></UserPropile></PrivateRoutes>
+        },{
+          path:'/login',
+          element:<Login></Login>
+        },{
+          path:'/register',
+          element:<RegisterPage></RegisterPage>
         }
       ]
     },
