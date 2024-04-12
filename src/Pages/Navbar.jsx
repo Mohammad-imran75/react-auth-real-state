@@ -11,7 +11,7 @@ const Navbar = () => {
   useEffect(()=>{
     setCurrentUser(user)
   },[user])
-  console.log(currentUser)
+  // console.log(currentUser)
   const handleSignOut = () =>{
     logOut()
     .then()

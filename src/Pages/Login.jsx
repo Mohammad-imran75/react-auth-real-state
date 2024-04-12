@@ -83,6 +83,9 @@ const handleLogin= e =>{
           </div>
         </form>
         <div>
+          
+        </div>
+        <div>
           <h3 className="text-center p-3">
             Do not have any acount please
             <Link className="font-bold text-blue-600" to="/register">
@@ -96,7 +99,6 @@ const handleLogin= e =>{
             {toast.error(error)}
           </ToastContainer>
         }
-      
     </div>
   );
 };

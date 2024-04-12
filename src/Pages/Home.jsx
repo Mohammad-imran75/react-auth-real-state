@@ -4,7 +4,7 @@ import Banner from './Banner';
 import {Helmet} from 'react-helmet';
 const Home = () => {
   const resturants = useLoaderData();
-  console.log(resturants);
+  // console.log(resturants);
   return (
     
    <div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Resturant = ({ resturant }) => {
   const { estate_title, image, area, location, price, status, id } = resturant;
-  console.log(resturant);
+  // console.log(resturant);
   return (
     <div className="card p-4 bg-purple-200 shadow-xl">
       <h1 className="text-3xl mt-2 font-bold text-center">{estate_title}</h1>
