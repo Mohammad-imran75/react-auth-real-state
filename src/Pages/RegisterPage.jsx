@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Helmet } from "react-helmet";
 const RegisterPage = () => {
-  
+ 
   const { userRegister } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
   const handleRegister = (e) => {
@@ -44,7 +44,7 @@ const RegisterPage = () => {
         <meta name="description" content="Helmet application" />
       </Helmet>
       <h2 className="text-3xl text-center font-serif">Please register now</h2>
-      <div className="md:w-3/4 lg:w-1/3 mx-auto shadow bg-base-100">
+      <div className="md:w-3/4 lg:w-1/3 mx-auto shadow bg-base-100" data-aos="fade-right">
         <form onSubmit={handleRegister} className="card-body">
           <div className="form-control">
             <label className="label">
