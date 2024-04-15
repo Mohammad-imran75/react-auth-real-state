@@ -29,7 +29,8 @@ import ErrorPage from "../Pages/ErrorPage";
         
         ,{
           path:'/update',
-          element:<UpdatePropile></UpdatePropile>
+          element:<UpdatePropile></UpdatePropile>,
+          loader:()=>fetch('/fakeData.json')
         },{
           path:'/user',
           element:<PrivateRoutes><UserPropile></UserPropile></PrivateRoutes>

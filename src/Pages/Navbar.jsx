@@ -1,51 +1,75 @@
 import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
-import {Helmet} from "react-helmet";
-
-
+import { Helmet } from "react-helmet";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Navbar = () => {
-  const [currentUser , setCurrentUser] = useState();
-  const { user,logOut } = useContext(AuthContext);
-
-  useEffect(()=>{
-    setCurrentUser(user)
-  },[user])
+  const [currentUser, setCurrentUser] = useState();
+  const { user, logOut } = useContext(AuthContext);
+  console.log(user);
+  useEffect(() => {
+    setCurrentUser(user);
+  }, [user]);
   // console.log(currentUser)
-  const handleSignOut = () =>{
+  const handleSignOut = () => {
     logOut()
-    .then()
-    .catch()    
-  }
+    .then((result)=>{
+      toast.success(result,'LogOut successfull')
+    }).catch();
+  };
   const navLinks = (
     <>
       <li>
-        <NavLink to="/" className={({ isActive }) =>
-            isActive ? "text-green-500 font-bold border border-green-500" : "text-black"
-          }>Home</NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive
+              ? "text-green-500 font-bold border border-green-500"
+              : "text-black"
+          }
+        >
+          Home
+        </NavLink>
       </li>
-      {
-        user ? <>
-        <li>
-        <NavLink className={({ isActive }) =>
-            isActive ? "text-green-500 font-bold border border-green-500" : "text-black"
-          } to="/update">Update Propile</NavLink>
-      </li>
-      <li>
-        <NavLink className={({ isActive }) =>
-            isActive ? "text-green-500 font-bold border border-green-500" : "text-black"
-          } to="/user">User Propile</NavLink>
-      </li></> : ''
-      }
+      {user ? (
+        <>
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "text-green-500 font-bold border border-green-500"
+                  : "text-black"
+              }
+              to="/update"
+            >
+              Update Propile
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "text-green-500 font-bold border border-green-500"
+                  : "text-black"
+              }
+              to="/user"
+            >
+              User Propile
+            </NavLink>
+          </li>
+        </>
+      ) : (
+        ""
+      )}
     </>
   );
   return (
-    
     <div className="navbar bg-base-100">
       <Helmet>
         <title>Web Navbar</title>
         <meta name="description" content="Helmet application" />
-    </Helmet>
+      </Helmet>
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -83,12 +107,23 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
+
       <div className="navbar-end">
+        <div>
+          <img
+            className="w-12 rounded-full lg: mr-4"
+            title={currentUser?.displayName}
+            src={user?.photoURL}
+            alt=""
+          />
+        </div>
         {currentUser ? (
           <>
-            <button onClick={handleSignOut} className="btn btn-secondary">
-              Sign Out
-            </button>
+            
+              <button onClick={handleSignOut} className="btn btn-secondary">
+                Sign Out
+          </button>
+            
           </>
         ) : (
           <>
@@ -101,6 +136,7 @@ const Navbar = () => {
           </>
         )}
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

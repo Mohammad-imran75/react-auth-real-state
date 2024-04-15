@@ -16,6 +16,10 @@ const Banner = () => {
             ❯
           </a>
         </div>
+        <div className=" absolute lg:top-40 left-96">
+          <h1 className="text-5xl font-bold text-orange-400">Welcome to Our Resturants<br /><span className="text-green-500 lg: ml-36 mt-8">Flavar Haven</span> </h1>
+          <p className="w-[600px] mx-auto mt-4 text-[20px] text-emerald-700 font-bold">Creating a unique dining experience by seamlessly blending culinary innovation with cozy ambiance in our restaurant project.</p>
+        </div>
       </div>
       <div id="slide2" className="carousel-item relative w-[1280px] h-[600px]">
         <img
@@ -29,6 +33,10 @@ const Banner = () => {
           <a href="#slide3" className="btn btn-circle">
             ❯
           </a>
+        </div>
+        <div className=" absolute lg:top-40 left-96">
+          <h1 className="text-5xl font-bold text-orange-400">Welcome to Our Resturants<br /><span className="text-green-500 lg: ml-36 mt-8">Flavar Haven</span> </h1>
+          <p className="w-[600px] mx-auto mt-4 text-[20px] text-emerald-700 font-bold">Creating a unique dining experience by seamlessly blending culinary innovation with cozy ambiance in our restaurant project.</p>
         </div>
       </div>
       <div id="slide3" className="carousel-item relative w-[1280px] h-[600px]">
@@ -44,6 +52,10 @@ const Banner = () => {
             ❯
           </a>
         </div>
+        <div className=" absolute lg:top-40 left-96">
+          <h1 className="text-5xl font-bold text-orange-400">Welcome to Our Resturants<br /><span className="text-green-500 lg: ml-36 mt-8">Flavar Haven</span> </h1>
+          <p className="w-[600px] mx-auto mt-4 text-[20px] text-emerald-700 font-bold">Creating a unique dining experience by seamlessly blending culinary innovation with cozy ambiance in our restaurant project.</p>
+        </div>
       </div>
       <div id="slide4" className="carousel-item relative ">
         <img
@@ -57,6 +69,10 @@ const Banner = () => {
           <a href="#slide1" className="btn btn-circle">
             ❯
           </a>
+        </div>
+        <div className=" absolute lg:top-40 left-96">
+          <h1 className="text-5xl font-bold text-orange-400">Welcome to Our Resturants<br /><span className="text-green-500 lg: ml-36 mt-8">Flavar Haven</span> </h1>
+          <p className="w-[600px] mx-auto mt-4 text-[20px] text-emerald-700 font-bold">Creating a unique dining experience by seamlessly blending culinary innovation with cozy ambiance in our restaurant project.</p>
         </div>
       </div>
     </div>

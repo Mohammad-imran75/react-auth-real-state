@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { CiSquareAlert } from "react-icons/ci";
 import { FaLocationDot } from "react-icons/fa6";
-
+import "animate.css"
 import { useEffect, useState } from "react";
 const Property = () => {
   const { id } = useParams();
@@ -28,7 +28,7 @@ const Property = () => {
 
       {item && (
         <>
-          <div className="hero lg:max-w-5xl mx-auto rounded-lg border-2 p-4 shadow-2xl">
+          <div className="hero lg:max-w-5xl mx-auto rounded-lg border-2 p-4 shadow-2xl animate__animated animate__rubberBand">
             <div className="hero-content flex-col justify-around lg:flex-row">
               <img
                 src={item.image}

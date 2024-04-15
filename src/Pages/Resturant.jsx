@@ -5,7 +5,7 @@ const Resturant = ({ resturant }) => {
   const { estate_title, image, area, location, price, status, id } = resturant;
   // console.log(resturant);
   return (
-    <div className="card p-4 bg-purple-200 shadow-xl">
+    <div data-aos="flip-up" className="card p-4 bg-purple-200 shadow-xl">
       <h1 className="text-3xl mt-2 font-bold text-center">{estate_title}</h1>
       <figure className="px-10 pt-10">
         <img src={image} alt="Shoes" className="rounded-xl w-[300px]" />
