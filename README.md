@@ -8,13 +8,13 @@
 - **Register Page**: This project usage a register page and password regex . You use to same email or same account another register try it .. you give a sweet toast.
 - **Login page**: Login page have usage email and password filled if you login account and you give a sweet toast . If you have already loging an account then you click resturant view property button and you showed resturant all property and a banner.
 - **Update User**: if you use update user page full name and photoUrl then show in navbar photo . this photo hover then show user name .
--**Responsive**: This project is fully responsive with mobile,tablet,and pc.
+- **Responsive**: This project is fully responsive with mobile,tablet,and pc.
 
 ## NPM package 
--**AOS Package**
--**Animate.css**
--**React leaflet**
--**swiper slider**
+- **AOS Package**
+- **Animate.css**
+- **React leaflet**
+- **swiper slider**
 ## Live Link 
-**Git Hub**:https://github.com/programming-hero-web-course-4/b9a9-real-estate-Mohammad-imran75.
--**Live Link** firebase : https://assignment-nine-auth.web.app/
+- **Git Hub**:https://github.com/programming-hero-web-course-4/b9a9-real-estate-Mohammad-imran75.
+- **Firebase Live Link** : https://assignment-nine-auth.web.app/
