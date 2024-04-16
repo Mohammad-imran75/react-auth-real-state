@@ -21,7 +21,7 @@ const UpdatePropile = () => {
         <title>Update propile</title>
         <meta name="description" content="Helmet application" />
     </Helmet>
-    <div className="md:w-3/4 lg:w-1/3 mx-auto shadow bg-base-100">
+    <div data-aos="zoom-in"  data-aos-duration="2000" className="md:w-3/4 lg:w-1/3 mx-auto shadow bg-base-100">
     <form onSubmit={handleUpdateUser} className="card-body">
           <div className="form-control">
             <label className="label">

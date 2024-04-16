@@ -52,8 +52,8 @@ const Login = () => {
         <title>Web login page</title>
         <meta name="description" content="Helmet application" />
       </Helmet>
-      <h2 className="text-3xl text-center font-serif">Please Login now</h2>
-      <div className="md:w-3/4 lg:w-1/3 mx-auto shadow-3xl bg-base-100">
+      <h2 data-aos="zoom-in"  data-aos-duration='2000' className="text-3xl text-center text-green-500 font-poppins">Please Login now</h2>
+      <div data-aos="zoom-in"  data-aos-delay='2500' className="md:w-3/4 lg:w-1/3 mx-auto shadow-3xl bg-base-100">
         <form onSubmit={handleLogin} className="card-body">
           <div className="form-control">
             <label className="label">
@@ -106,7 +106,7 @@ const Login = () => {
           </h3>
         </div>
 
-        <div className="flex justify-center gap-4 text-3xl mt-4 border-t-2 p-3">
+        <div  className="flex justify-center gap-4 text-3xl mt-4 border-t-2 p-3">
           <FcGoogle onClick={handleGoogleLogin}></FcGoogle>
           <FaGithubSquare onClick={handleGitHubLogin}></FaGithubSquare>
         </div>

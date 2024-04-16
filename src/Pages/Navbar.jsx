@@ -65,7 +65,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-pink-300 lg:rounded-lg p-3">
       <Helmet>
         <title>Web Navbar</title>
         <meta name="description" content="Helmet application" />
@@ -97,7 +97,7 @@ const Navbar = () => {
         </div>
         <div className="flex items-center gap-0">
           <img
-            className="w-[120px]"
+            className="w-[60px]"
             src="https://i.ibb.co/0V995tL/7697984.jpg"
             alt=""
           />

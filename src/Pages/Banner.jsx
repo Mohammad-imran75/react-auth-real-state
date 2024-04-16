@@ -1,81 +1,143 @@
-
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  EffectFlip,
+} from "swiper/modules";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 const Banner = () => {
   return (
-    <div className="carousel w-full">
-      <div id="slide1" className="carousel-item relative w-[1280px] h-[600px]">
+    <Swiper
+      modules={[Navigation, Pagination, Scrollbar, A11y, EffectFlip]}
+      spaceBetween={50}
+      effect="flip"
+      slidesPerView={1}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+    >
+      <SwiperSlide>
         <img
-          src="https://i.ibb.co/1bg6Gq8/restaurant-table-with-two-couches-near-window.jpg"
-          className="w-full"
-        />
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide4" className="btn btn-circle">
-            ❮
-          </a>
-          <a href="#slide2" className="btn btn-circle">
-            ❯
-          </a>
-        </div>
-        <div className=" absolute lg:top-40 left-96">
-          <h1 className="text-5xl font-bold text-orange-400">Welcome to Our Resturants<br /><span className="text-green-500 lg: ml-36 mt-8">Flavar Haven</span> </h1>
-          <p className="w-[600px] mx-auto mt-4 text-[20px] text-emerald-700 font-bold">Creating a unique dining experience by seamlessly blending culinary innovation with cozy ambiance in our restaurant project.</p>
-        </div>
-      </div>
-      <div id="slide2" className="carousel-item relative w-[1280px] h-[600px]">
-        <img
-          src="https://i.ibb.co/Gs5z2D0/tomas-martinez-1vl-Uai-EQR6k-unsplash.jpg"
-          className="w-full"
-        />
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide1" className="btn btn-circle">
-            ❮
-          </a>
-          <a href="#slide3" className="btn btn-circle">
-            ❯
-          </a>
-        </div>
-        <div className=" absolute lg:top-40 left-96">
-          <h1 className="text-5xl font-bold text-orange-400">Welcome to Our Resturants<br /><span className="text-green-500 lg: ml-36 mt-8">Flavar Haven</span> </h1>
-          <p className="w-[600px] mx-auto mt-4 text-[20px] text-emerald-700 font-bold">Creating a unique dining experience by seamlessly blending culinary innovation with cozy ambiance in our restaurant project.</p>
-        </div>
-      </div>
-      <div id="slide3" className="carousel-item relative w-[1280px] h-[600px]">
-        <img
-          src="https://i.ibb.co/sPpbybp/restaurant-hall-with-bright-color-sitting-furniturs-panoramic-windows.jpg"
-          className="w-full"
-        />
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide2" className="btn btn-circle">
-            ❮
-          </a>
-          <a href="#slide4" className="btn btn-circle">
-            ❯
-          </a>
-        </div>
-        <div className=" absolute lg:top-40 left-96">
-          <h1 className="text-5xl font-bold text-orange-400">Welcome to Our Resturants<br /><span className="text-green-500 lg: ml-36 mt-8">Flavar Haven</span> </h1>
-          <p className="w-[600px] mx-auto mt-4 text-[20px] text-emerald-700 font-bold">Creating a unique dining experience by seamlessly blending culinary innovation with cozy ambiance in our restaurant project.</p>
-        </div>
-      </div>
-      <div id="slide4" className="carousel-item relative ">
-        <img
+          style={{ width: "100%", height: "100vh" }}
           src="https://i.ibb.co/KsYmnj1/sitting-table-with-chairs-yellow-sofa-restaurant-with-panoramic-view.jpg"
-          className="w-[1280px] h-[600px]"
+          alt=""
         />
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide3" className="btn btn-circle">
-            ❮
-          </a>
-          <a href="#slide1" className="btn btn-circle">
-            ❯
-          </a>
+        <div className="lg:absolute slide-title lg:top-40 left-72">
+          /{" "}
+          <h1
+            data-aos="flip-left"
+            data-aos-duration="2000"
+            className="lg:text-5xl animation-duration: 2s font-bold text-orange-400"
+          >
+            Welcome to Our LUXARY Resturants
+            <br />
+            <span className="text-green-500 lg:ml-36 mt-8">
+              Flavar Haven
+            </span>{" "}
+          </h1>
+          <p
+            data-aos="fade-down"
+            data-aos-delay="2000"
+            className="lg:w-[700px] mx-auto mt-4 text-[20px] text-white font-bold"
+          >
+            Creating a unique dining experience by seamlessly blending culinary
+            innovation with cozy ambiance in our restaurant project.
+          </p>
         </div>
-        <div className=" absolute lg:top-40 left-96">
-          <h1 className="text-5xl font-bold text-orange-400">Welcome to Our Resturants<br /><span className="text-green-500 lg: ml-36 mt-8">Flavar Haven</span> </h1>
-          <p className="w-[600px] mx-auto mt-4 text-[20px] text-emerald-700 font-bold">Creating a unique dining experience by seamlessly blending culinary innovation with cozy ambiance in our restaurant project.</p>
+      </SwiperSlide>
+      <SwiperSlide>
+        <img
+          style={{ width: "100%", height: "100vh" }}
+          src="https://i.ibb.co/sPpbybp/restaurant-hall-with-bright-color-sitting-furniturs-panoramic-windows.jpg"
+          alt=""
+        />
+        <div className="lg:absolute slide-title lg:top-40 left-72">
+          /{" "}
+          <h1
+            data-aos="flip-left"
+            data-aos-duration="2000"
+            className="lg:text-5xl animation-duration: 2s font-bold text-orange-400"
+          >
+            Welcome to Our LUXARY Resturants
+            <br />
+            <span className="text-green-500 lg:ml-36 mt-8">
+              Flavar Haven
+            </span>{" "}
+          </h1>
+          <p
+            data-aos="fade-down"
+            data-aos-delay="2000"
+            className="lg:w-[700px] mx-auto mt-4 text-[20px] text-white font-bold"
+          >
+            Creating a unique dining experience by seamlessly blending culinary
+            innovation with cozy ambiance in our restaurant project.
+          </p>
         </div>
-      </div>
-    </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <img
+          style={{ width: "100%", height: "100vh" }}
+          src="https://i.ibb.co/Gs5z2D0/tomas-martinez-1vl-Uai-EQR6k-unsplash.jpg"
+          alt=""
+        />
+        <div className="lg:absolute slide-title lg:top-40 left-72">
+          /{" "}
+          <h1
+            data-aos="flip-left"
+            data-aos-duration="2000"
+            className="lg:text-5xl animation-duration: 2s font-bold text-orange-400"
+          >
+            Welcome to Our LUXARY Resturants
+            <br />
+            <span className="text-green-500 lg:ml-36 mt-8">
+              Flavar Haven
+            </span>{" "}
+          </h1>
+          <p
+            data-aos="fade-down"
+            data-aos-delay="2000"
+            className="lg:w-[700px] mx-auto mt-4 text-[20px] text-white font-bold"
+          >
+            Creating a unique dining experience by seamlessly blending culinary
+            innovation with cozy ambiance in our restaurant project.
+          </p>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <img
+          style={{ width: "100%", height: "100vh" }}
+          src="https://i.ibb.co/m6Sq0Bx/side-view-breakfast-table-with-red-tablecloth-fried-eggs-cheese-cheese-cucumbers-tomatoes-lettuce-co.jpg"
+          alt=""
+        />
+        <div className="lg:absolute slide-title lg:top-40 left-72">
+          /{" "}
+          <h1
+            data-aos="flip-left"
+            data-aos-duration="2000"
+            className="lg:text-5xl animation-duration: 2s font-bold text-orange-400"
+          >
+            Welcome to Our LUXARY Resturants
+            <br />
+            <span className="text-green-500 lg:ml-36 mt-8">
+              Flavar Haven
+            </span>{" "}
+          </h1>
+          <p
+            data-aos="fade-down"
+            data-aos-delay="2000"
+            className="lg:w-[700px] mx-auto mt-4 text-[20px] text-white font-bold"
+          >
+            Creating a unique dining experience by seamlessly blending culinary
+            innovation with cozy ambiance in our restaurant project.
+          </p>
+        </div>
+      </SwiperSlide>
+    </Swiper>
   );
 };
 

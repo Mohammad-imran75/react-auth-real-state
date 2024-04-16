@@ -1,6 +1,8 @@
 const Footer = () => {
   return (
-    <div className="mt-10">
+    <div className="mt-10" data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500">
       <footer className="footer p-10 bg-neutral text-neutral-content">
         <nav>
           <h6 className="footer-title">About us</h6>

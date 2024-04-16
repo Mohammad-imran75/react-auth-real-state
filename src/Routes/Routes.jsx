@@ -10,7 +10,9 @@ import RegisterPage from "../Pages/RegisterPage";
 import PrivateRoutes from "./PrivateRoutes";
 import Property from "../Pages/Property";
 import ErrorPage from "../Pages/ErrorPage";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
   const router = createBrowserRouter([
     {
       path: "/",

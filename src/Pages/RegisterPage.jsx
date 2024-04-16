@@ -43,8 +43,8 @@ const RegisterPage = () => {
         <title>Web Register page</title>
         <meta name="description" content="Helmet application" />
       </Helmet>
-      <h2 className="text-3xl text-center font-serif">Please register now</h2>
-      <div className="md:w-3/4 lg:w-1/3 mx-auto shadow bg-base-100" data-aos="fade-right">
+      <h2 data-aos="fade-left" data-aos-duration="2000" className="text-3xl text-center font-serif text-red-400">Please register now</h2>
+      <div className="md:w-3/4 lg:w-1/3 mx-auto shadow bg-base-100 " data-aos="fade-right" data-aos-delay="2000">
         <form onSubmit={handleRegister} className="card-body">
           <div className="form-control">
             <label className="label">

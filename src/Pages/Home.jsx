@@ -13,8 +13,8 @@ const Home = () => {
         <meta name="description" content="Helmet application" />
     </Helmet>
     <Banner></Banner>
-    <h1 className='text-center mt-7 font-bold text-5xl'><span className='text-orange-400'>Resturant</span> Real  <span className='text-orange-500'>Estate</span><br /> Section</h1>
-     <div className='grid lg:grid-cols-3 gap-6 mt-10'>
+    <h1 data-aos="fade-up" data-aos-duration="1000" className='text-center mt-7 font-bold text-5xl'><span className='text-orange-400'>Resturant</span> Real  <span className='text-orange-500'>Estate</span><br /> Section</h1>
+     <div data-aos="fade-left" data-aos-delay="1000" className='grid lg:grid-cols-3 gap-6 mt-10'>
       
       {
         resturants.map(resturant => <Resturant key={resturant.id} resturant={resturant}></Resturant>)
