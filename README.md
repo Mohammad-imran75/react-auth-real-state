@@ -11,10 +11,10 @@
 -**Responsive**: This project is fully responsive with mobile,tablet,and pc.
 
 ## NPM package 
--* AOS Package
--Animate.css
--*React leaflet
--* swiper slider
+-**AOS Package**
+-**Animate.css**
+-**React leaflet**
+-**swiper slider**
 ## Live Link 
 **Git Hub**:https://github.com/programming-hero-web-course-4/b9a9-real-estate-Mohammad-imran75.
 -**Live Link** firebase : https://assignment-nine-auth.web.app/
