@@ -81,7 +81,7 @@ const Login = () => {
               />{" "}
               <span
                 onClick={() => setShowPassword(!showPassword)}
-                className="lg:absolute top-12 right-4"
+                className="lg:absolute top-12 right-4 "
               >
                 {showPassword ? <FaEye /> : <FaEyeSlash />}
               </span>
@@ -111,7 +111,7 @@ const Login = () => {
           <FaGithubSquare onClick={handleGitHubLogin}></FaGithubSquare>
         </div>
       </div>
-      <ToastContainer></ToastContainer>
+      <ToastContainer autoClose></ToastContainer>
     </div>
   );
 };

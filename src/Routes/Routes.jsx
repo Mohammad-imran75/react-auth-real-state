@@ -12,6 +12,7 @@ import Property from "../Pages/Property";
 import ErrorPage from "../Pages/ErrorPage";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import Contact from "../Pages/Contact";
 AOS.init();
   const router = createBrowserRouter([
     {
@@ -42,6 +43,9 @@ AOS.init();
         },{
           path:'/register',
           element:<RegisterPage></RegisterPage>
+        },{
+          path:'/contact',
+          element:<Contact></Contact>
         }
       ]
     },

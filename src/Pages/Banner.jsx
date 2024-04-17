@@ -5,7 +5,7 @@ import {
   Pagination,
   Scrollbar,
   A11y,
-  EffectFlip,
+  EffectFade,
 } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -13,7 +13,7 @@ import "swiper/css/scrollbar";
 const Banner = () => {
   return (
     <Swiper
-      modules={[Navigation, Pagination, Scrollbar, A11y, EffectFlip]}
+      modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
       spaceBetween={50}
       effect="flip"
       slidesPerView={1}
@@ -28,7 +28,7 @@ const Banner = () => {
           alt=""
         />
         <div className="lg:absolute slide-title lg:top-40 left-72">
-          /{" "}
+          {" "}
           <h1
             data-aos="flip-left"
             data-aos-duration="2000"
@@ -57,7 +57,7 @@ const Banner = () => {
           alt=""
         />
         <div className="lg:absolute slide-title lg:top-40 left-72">
-          /{" "}
+          {" "}
           <h1
             data-aos="flip-left"
             data-aos-duration="2000"
@@ -86,7 +86,7 @@ const Banner = () => {
           alt=""
         />
         <div className="lg:absolute slide-title lg:top-40 left-72">
-          /{" "}
+          {" "}
           <h1
             data-aos="flip-left"
             data-aos-duration="2000"
@@ -115,7 +115,7 @@ const Banner = () => {
           alt=""
         />
         <div className="lg:absolute slide-title lg:top-40 left-72">
-          /{" "}
+          {" "}
           <h1
             data-aos="flip-left"
             data-aos-duration="2000"

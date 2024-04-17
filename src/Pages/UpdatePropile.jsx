@@ -1,19 +1,21 @@
 import {Helmet} from 'react-helmet';
 import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
-// import {useLoaderData} from 'react-router-dom'
+
 const UpdatePropile = () => {
     const {updateUser,setUser} = useContext(AuthContext);
-    // const resturants = useLoaderData();
-    // const resturnt = resturants.map(item=>)
-    // console.log(resturants);
+    //
     const handleUpdateUser = (e) =>{
         e.preventDefault()
         const form = new FormData(e.currentTarget);
         const name = form.get('name');
         const photo = form.get('photo');
         updateUser(name,photo)
-        .then(result =>setUser(result))
+        .then(result =>setUser({
+          userName:name,
+          photoURL:photo,
+          result
+        }))
         .then(error =>console.log(error));
     }
     return (
