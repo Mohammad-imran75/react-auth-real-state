@@ -5,6 +5,7 @@ import { CiSquareAlert } from "react-icons/ci";
 import { FaLocationDot } from "react-icons/fa6";
 import "animate.css"
 import { useEffect, useState } from "react";
+import Slider from "./Slider";
 const Property = () => {
   const { id } = useParams();
   const [item, setItem] = useState();
@@ -21,11 +22,12 @@ const Property = () => {
 
   return (
     <div>
+     
       <Helmet>
         <title>View Details page</title>
         <meta name="description" content="Helmet application" />
       </Helmet>
-
+      <Slider/>
       {item && (
         <>
           <div className="hero lg:max-w-5xl mx-auto rounded-lg border-2 p-4 shadow-2xl animate__animated animate__rubberBand">
