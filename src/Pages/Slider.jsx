@@ -27,7 +27,7 @@ const Slider = () => {
             See Our luxary Resturant Details
             <br />
             <span className="text-green-500 lg:ml-36 mt-8">
-              Flavar Haven
+              Flaver HaVen
             </span>{" "}
           </h1>
           <p
