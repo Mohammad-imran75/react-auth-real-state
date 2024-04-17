@@ -7,7 +7,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { FaEye, FaEyeSlash, FaGithubSquare } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 const Login = () => {
-  const { loginUser,googleLogin,gitHubLogin,setUser} = useContext(AuthContext);
+  const { loginUser, googleLogin, gitHubLogin, setUser } =
+    useContext(AuthContext);
   const location = useLocation();
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ const Login = () => {
     const form = new FormData(e.currentTarget);
     const email = form.get("email");
     const password = form.get("password");
-    
+
     if (password.length < 6) {
       toast.error("Password must be 6 characters or longer");
       return;
@@ -30,30 +31,41 @@ const Login = () => {
     loginUser(email, password)
       .then((result) => {
         console.log(result.user);
-        
+
         navigate(location?.state ? location.state : "/");
-        toast.success("Login successfull");
+
+        toast.success("Login successful");
       })
       .catch((error) => toast.error(error.message));
   };
-   const handleGoogleLogin = () =>{
+  const handleGoogleLogin = () => {
     googleLogin()
-    .then(result=>setUser(result))
-    .then(error=>toast.error(error.message));
-   }
-   const handleGitHubLogin = () =>{
+      .then((result) => setUser(result))
+      .then((error) => toast.error(error.message));
+  };
+  const handleGitHubLogin = () => {
     gitHubLogin()
-    .then(result => setUser(result))
-    .catch(error=> toast.error(error.message))
-   }
+      .then((result) => setUser(result))
+      .catch((error) => toast.error(error.message));
+  };
   return (
     <div className="mt-10">
       <Helmet>
         <title>Web login page</title>
         <meta name="description" content="Helmet application" />
       </Helmet>
-      <h2 data-aos="zoom-in"  data-aos-duration='2000' className="text-3xl text-center text-green-500 font-poppins">Please Login now</h2>
-      <div data-aos="zoom-in"  data-aos-delay='2500' className="md:w-3/4 lg:w-1/3 mx-auto shadow-3xl bg-base-100">
+      <h2
+        data-aos="zoom-in"
+        data-aos-duration="2000"
+        className="text-3xl text-center text-green-500 font-poppins"
+      >
+        Please Login now
+      </h2>
+      <div
+        data-aos="zoom-in"
+        data-aos-delay="2500"
+        className="md:w-3/4 lg:w-1/3 mx-auto shadow-3xl bg-base-100"
+      >
         <form onSubmit={handleLogin} className="card-body">
           <div className="form-control">
             <label className="label">
@@ -106,7 +118,7 @@ const Login = () => {
           </h3>
         </div>
 
-        <div  className="flex justify-center gap-4 text-3xl mt-4 border-t-2 p-3">
+        <div className="flex justify-center gap-4 text-3xl mt-4 border-t-2 p-3">
           <FcGoogle onClick={handleGoogleLogin}></FcGoogle>
           <FaGithubSquare onClick={handleGitHubLogin}></FaGithubSquare>
         </div>

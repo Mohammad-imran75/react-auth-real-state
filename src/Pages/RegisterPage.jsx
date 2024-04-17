@@ -1,12 +1,13 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Helmet } from "react-helmet";
 const RegisterPage = () => {
- 
+  const location = useLocation();
+  const navigate = useNavigate();
   const { userRegister } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
   const handleRegister = (e) => {
@@ -30,6 +31,7 @@ const RegisterPage = () => {
     userRegister(email, password)
       .then((result) => {
         console.log(result.user);
+        navigate(location?.state ? location.state : "/login");
         toast.success("Registrantion Successfull");
       })
       .catch((error) => {
