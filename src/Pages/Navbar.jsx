@@ -1,11 +1,14 @@
 import { useContext, useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
+
 import { AuthContext } from "../Provider/AuthProvider";
 import { Helmet } from "react-helmet";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Navbar = () => {
   const [currentUser, setCurrentUser] = useState();
+  const location = useLocation();
+  const navigate = useNavigate();
   const { user, logOut } = useContext(AuthContext);
   console.log(user);
   useEffect(() => {
@@ -15,7 +18,9 @@ const Navbar = () => {
   const handleSignOut = () => {
     logOut()
     .then((result)=>{
-      toast.success(result,'LogOut successfull')
+      console.log(result)
+      navigate(location?.state ? location.state : "/");
+      toast.success('LogOut successfull', { position: toast.POSITION.TOP_RIGHT });
     }).catch();
   };
   const navLinks = (
@@ -148,7 +153,7 @@ const Navbar = () => {
           </>
         )}
       </div>
-      <ToastContainer></ToastContainer>
+      <ToastContainer/>
     </div>
   );
 };

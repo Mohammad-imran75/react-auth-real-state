@@ -33,7 +33,6 @@ const Login = () => {
         console.log(result.user);
 
         navigate(location?.state ? location.state : "/");
-
         toast.success("Login successful");
       })
       .catch((error) => toast.error(error.message));
